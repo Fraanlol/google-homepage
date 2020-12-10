@@ -18,13 +18,16 @@ article{
     grid-template-columns: auto;
     grid-template-rows: auto 1fr auto auto;
 }
+.Desktopnav{
+    display:none
+}
 .upb{
     display: grid;
     grid-template-columns: 15% auto 30%;
     align-content: end;
     line-height: 50px;
 }
-.upb ul{
+.upb > .rght, .upb > .lft{
     display:flex;
 }
 .rght{
@@ -66,6 +69,7 @@ article{
     height: 67.64px;
     
 }
+
 .containersearchbar{
     width: 95%;
     margin-top: 40px;
@@ -81,6 +85,7 @@ article{
     width:88%;
     padding: 9px;
     border:none;
+    outline:none;
     
 }
 
@@ -108,11 +113,8 @@ footer > div {
     background: #f2f2f2;
 }
 .country{
-    text-align: center;
-    vertical-align: middle;
     box-sizing: border-box;
     border-top: 1px solid #dadce0;
-    
     display:flex;
     justify-content:center;
     align-content: center;
@@ -127,7 +129,7 @@ footer > div {
 }
 .frstitems > ul {
     display:flex;
-    width:100%;
+    width:auto;
     justify-content:space-around;
     box-sizing: border-box;
 
@@ -211,5 +213,138 @@ footer > div {
     }
 }
 
+@media (min-width: 1080px){
+    .MenuMobile, .rght, .lft{
+        display:none !important;
+    }
+    .upb{
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+     }
+     .Desktopnav{
+         display: flex;
+         justify-content:flex-end;
+         padding:15px 30px 0 0;
+     }
+     
+     .dkmenu{
+         padding-right: 10px;
+         line-height: 37px;
+     }
 
+     .dkusr a img{
+        border-radius: 20px;
+     }
+     
+     .dkimg, .dkmail{
+         line-height: 32px;
+         padding-right: 9px;
+         font-size: 13px;
+     }
+     .dkimg a, .dkmail a{
+        color: rgba(0,0,0,0.87) !important;
+     }
+     .dkmail{
+         padding-right: 14px;
+     }
+     .containersearchbar{
+        width:43%;
+    }
+    .containersearchbar:hover{
+        background-color: #fff;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    border-color: rgba(223,225,229,0);
+    }
+    .country {
+        display: none;
+    }
+    
+    footer {
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        background: #f2f2f2;
+        border-top: 1px solid #dadce0;
 
+    }
+    .frstitems, .scnditems, .frstitems ul, .scnditems ul{
+        padding:0;
+        font-size: 14px;
+        border:none;
+    }
+    .scnditems{
+        order:1;
+        width:50%;
+        padding: 11px;
+    }
+    .frstitems{
+        order:2;
+        justify-self: end;
+        width:50%;
+        padding: 11px;
+    }
+    .frstitems ul, .scnditems ul{
+        display:flex;
+        justify-content:flex-start
+    }
+    .frstitems ul li:hover, .scnditems ul li:hover, .language a:hover {
+        text-decoration: underline;
+    }
+    .scnditems ul{
+        padding-left: 20px; 
+        width: 130%
+    }
+    .advertising, .business{
+        padding-right: 26px;
+    }
+    .frstitems ul{
+        padding-left: 85px;
+    }
+    .settings{
+        order:100;
+    }
+    .privacy, .terms, .about{
+        padding-right: 26px;
+    }
+    .hsw{
+        display: inherit !important;
+    }
+
+    .buttons{
+        display: block !important;
+        text-align:center;
+        line-height: 120px;
+        height:auto !important;
+
+    }
+    .searchbutton, .randomsearch{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    }
+    .searchbutton:hover, .randomsearch:hover{
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        background-image: -webkit-linear-gradient(top,#f8f9fa,#f8f9fa);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124;
+    }
+    .language{
+        padding:0;
+    }
+
+    .dkmail a:hover, .dkimg a:hover{
+        text-decoration: underline;
+        opacity: .8
+    }
+    .dkmenu a img:hover{
+        opacity: 1 !important;
+    }
+
+}
