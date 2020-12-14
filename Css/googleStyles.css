@@ -72,7 +72,7 @@ article{
 }
 
 .containersearchbar{
-    width: 95%;
+    width: 100%;
     margin-top: 40px;
     text-align:center;
     border: 1px solid #dadce0;
@@ -88,6 +88,13 @@ article{
     border:none;
     outline:none;
     
+}
+
+form{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    padding: 0 8px;
 }
 
 .containersearchbar > svg {
@@ -218,6 +225,13 @@ footer > div {
     .MenuMobile, .rght, .lft{
         display:none !important;
     }
+    .mainLogo{
+        padding-top: 60px !important;
+    }
+    .mLogo{
+        width: 275px;
+        height:95px;
+    }
     .upb{
         grid-template-columns: auto;
         grid-auto-flow: column;
@@ -275,7 +289,6 @@ footer > div {
     }
     .scnditems{
         order:1;
-        width:50%;
         padding: 11px;
     }
     .frstitems{
@@ -309,6 +322,7 @@ footer > div {
     }
     .hsw{
         display: inherit !important;
+        
     }
 
     .buttons{
@@ -346,6 +360,9 @@ footer > div {
     }
     .dkmenu a img:hover{
         opacity: 1 !important;
+    }
+    form{
+       
     }
 
 }
